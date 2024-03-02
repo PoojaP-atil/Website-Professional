@@ -1,0 +1,599 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color: #fff;
+
+            }
+
+            .body1{
+                z-index: 2;
+            }
+
+            .mainbody{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-container{
+                position: relative;
+                background-color: #fff;
+                height: 25%;
+                z-index: 2;
+            }
+
+            .logo{
+                padding-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 20%;
+            }
+
+            .nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Raleway', sans-serif;
+                padding-top: 30px;
+                height: 50px;
+            }
+
+            .left{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 10px;
+                padding-left: 0;
+            }
+
+            .left ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            .left li {
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+                background-color: #b1185d;
+                color: #F6F7F8;
+            }
+
+            .right ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .right li {
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+
+            .bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                overflow: hidden;
+            }
+
+            .bg img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .bg-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color here */
+                z-index: 2;
+            }
+
+            .content {
+                position: absolute;
+                top: 35%;
+                left: 30%;
+                right: 30%;
+                z-index: 3; 
+                text-align: center;
+                color: #fff;
+                font-family: 'Great Vibes',handwriting;
+                font-size: 40px;
+            }
+
+            .seperator {
+                position: absolute;
+                top: 60%;
+                left: 47%;
+                z-index: 3; 
+                text-align: center;
+                border-top: 3px solid rgb(206, 205, 205); 
+                width: 6%;
+                margin: 0 auto; 
+            }
+
+            .content1 {
+                position: absolute;
+                top: 65%;
+                right: 15%;
+                left: 15%;
+                z-index: 3; 
+                text-align: center;
+                color: #fff;
+                font-family: 'Great Vibes',handwriting;
+                font-size: 40px;
+            }
+
+            .services{
+                position: absolute;
+                top: 105%;
+                right: 45%;
+                left: 45%;
+                width: 12%;
+                height: 5%;
+                z-index: 3; 
+                text-align: center;
+                padding-top: 15px;
+                background-color: #fff;
+                color: #b1185d;
+            }
+
+            .services a {
+                color: #b1185d;
+                text-decoration: none;
+                font-size: 18px;
+            }
+
+            .section{
+                margin-top: 50%;
+                margin-bottom: 0;
+                padding: 10% 30%;
+                position: relative;
+                z-index: 4;
+            }
+
+            .section img{
+                position: absolute;
+                top: 110%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: auto;
+                object-fit: cover;
+            }
+
+            .main{
+                top: 270%;
+                text-align: center;
+                z-index: 3;
+            }
+
+            .main1{
+                margin-top: 0%;
+                background-color: #fff;
+                z-index: 4;
+                padding-bottom: 250px;
+            }
+
+            .seperator1 {
+                position: absolute;
+                top: 225%;
+                left: 47%;
+                z-index: 4; 
+                text-align: center;
+                border-top: 3px solid rgb(206, 205, 205); 
+                width: 6%;
+                margin: 0 auto; 
+            }
+            .title {
+                padding-top: 500px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #b1185d;
+                font-family: 'Great Vibes',handwriting;
+                font-size: 72px;
+            }
+
+            .about {
+                margin-top: 20px;
+                color: #b1185d;
+                font-family: 'Great Vibes',handwriting;
+                font-size: 48px;
+            }
+
+            .para{
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+            .para p{
+                
+                font-size: 20px;
+                font-family: 'Roboto';
+                color: #989898;
+                padding-bottom: 30px;
+            }
+
+            .readmore{
+                transform: translate(370%, -50%);
+                width: 12%;
+                height: 4%;
+                z-index: 4; 
+                text-align: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                background-color: #b1185d;
+                color: #fff;
+            }
+
+            .readmore a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+            }
+
+            .sec{
+                text-align: center;
+                z-index: 1;
+                
+            }
+
+            .sec1{
+                margin-top: 0%;
+                background-image: url(banner.jpg); 
+                background-size: cover;
+                background-position: center;
+                z-index: 3;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1900px; 
+                width: 100%;
+            }
+
+            .sec-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color here */
+                z-index: -1;
+            }
+
+            .c1, .c2, .c3 {
+                margin-top: -130%;
+                width: 25%; 
+                height: 500px; 
+            }
+
+            .c1 {
+                background-image: url(1.jpg); 
+                background-size: cover;
+                background-position: center;
+            }
+
+            .c2 {
+                background-image: url(2.jpg); 
+                background-size: cover;
+                background-position: center;
+            }
+
+            .c3 {
+                background-image: url(3.jpg); 
+                background-size: cover;
+                background-position: center;
+            }
+
+            .cc1, .cc2, .cc3 {
+                background-color: rgba(255, 255, 255, .97);
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-top: 50%;
+                margin-left: 15%;
+                width: 70%;
+            }
+
+            .cc1 p, .cc2 p, .cc3 p {
+                font-family: 'Great Vibes',handwriting;
+                font-size: 28px;
+                color: #b1185d;
+                padding: 10px;
+            }
+
+            .cc1 p a, .cc2 p a, .cc3 p a{
+                font-family: 'Roboto';
+                font-size: 18px;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px;
+            }
+
+            
+            .bgtext {
+                position: relative;
+                top: -210%;
+                z-index: 5; 
+                text-align: center;
+            }
+
+            .seperator2 {
+                position: relative; 
+                margin-top: 20px; 
+                border-top: 3px solid rgb(206, 205, 205);
+                width: 6%;
+                margin: 0 auto;
+            }
+
+            .title1 {
+                font-size: 82px;
+                color: #fff;
+                font-family: 'Great Vibes', handwriting;
+                z-index: 6;
+                position: relative; 
+                margin-top: 40px; 
+            }
+
+            .subtitle1 {
+                font-size: 54px;
+                color: #fff;
+                font-family: 'Great Vibes', handwriting;
+                z-index: 6;
+                position: relative; 
+                margin-top: 40px;
+            }
+
+            .testimonial-section {
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+            }
+
+            .testimonial-subsection {
+                width: 50%; 
+                padding: 20px;
+                margin-left: 25%;
+                text-align: center;
+                background-color: transparent;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            .testimonial-subsection img {
+                border-radius: 50%;
+            }
+
+            .subtitle2 {
+                font-size: 54px;
+                color: #fff;
+                font-family: 'Great Vibes', handwriting;
+                z-index: 6;
+                position: relative; 
+                margin-top: 40px;
+            }
+
+            .seperator3 {
+                position: relative; 
+                margin-top: 20px; 
+                border-top: 2px solid rgb(206, 205, 205);
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .secc {
+                text-align: center;
+                z-index: 7;
+                background-color: #fff;
+            }
+            
+            .c22 {
+                width: 45%;
+                height: 300px;
+                background-image: url(4.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .cc11,
+            .cc22 {
+                background-color: rgba(255, 255, 255, .97);
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-top: 50%;
+                width: 70%;
+            }
+
+            .cc11 p,
+            .cc22 p {
+                font-family: 'Great Vibes', handwriting;
+                font-size: 28px;
+                color: #b1185d;
+                padding: 10px;
+            }
+
+            .cc11 p a,
+            .cc22 p a {
+                font-family: 'Roboto';
+                font-size: 18px;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px;
+            }
+
+
+            @media (max-width: 800px) {
+                .logo {
+                    width: 100px;
+                }      
+                .nav-menu {
+                    display: none;
+                    height: 50px;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    flex-direction: column;
+                }
+                .nav-menu.show {
+                    display: flex;
+                }
+                .nav-menu li {
+                    text-align: center;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #ddd;
+                }
+                .content,
+                .content1 {
+                    font-size: 30px;
+                }
+                .seperator {
+                    top: 40%;
+                }
+                .services {
+                    top: 65%;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="body1">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <div class="nav">
+                    <div class="left">
+                        <ul class="nav-menu">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Services</li>
+                            <li>Gallery</li>
+                            <li>Testimonials</li>
+                            <li>Contacts</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>Call Us : +91 9632587410</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainbody">
+            <div class="bg">
+                <img src="bg.jpg" alt="bg">
+                <div class="bg-overlay"></div>
+            </div>
+            <div class="content">
+                <h2>Welcome to Flowery</h2>
+            </div>
+            <div class="seperator"></div>
+            <div class="content1">
+                <h1>We  Collect  Beauty  &  Passion.</h1> 
+            </div>
+            <div class="services">
+                <a href="#"> View Our Services </a>
+            </div>
+            <div class="section">
+                <img src="florist-profile.jpg" alt="profile">
+            </div>
+            <div class="main">
+                <div class="main1">
+                <div class="seperator1"></div>
+                <div class="title"> Who We Are </div>
+                <div class="about">About</div>
+                <div class="para">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                    <div class="readmore">
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec">
+            <div class="sec1">
+                <div class="sec-overlay"></div>
+                <div class="c1">
+                    <div class="cc1">
+                        <p>$ 175.00</p>
+                        <p>Subscription Service</p>
+                        <p><a href="#" class="readmore">Read More</a></p>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="cc2">
+                        <p>$375.00</p>
+                        <p>In-Home Design</p>
+                        <p><a href="#" class="readmore">Read More</a></p>
+                    </div>
+                </div>
+                <div class="c3">
+                    <div class="cc3">
+                        <p>$150.00</p>
+                        <p>Seasonal Flowers</p>
+                        <p><a href="#" class="readmore">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bgtext">
+            <div class="seperator2"></div>
+            <div class="title1"> Our Happy Clients </div>
+            <div class="subtitle1">Testimonial</div>
+            <div class="testimonial-section">
+                <div class="testimonial-subsection"><img src="t1.jpg" alt="t1"></div>
+                <div class="testimonial-subsection">Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.</div>
+                <div class="testimonial-subsection"><i class="fa fa-quote-right" aria-hidden="true"></i></div>
+                <div class="subtitle2">Anna Alvarez</div>
+            </div>
+            <div class="seperator3"></div>
+            <div class="testimonial-section">
+                <div class="testimonial-subsection"><img src="t2.jpg" alt="t2"></div>
+                <div class="testimonial-subsection">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</div>
+                <div class="testimonial-subsection"><i class="fa fa-quote-right" aria-hidden="true"></i></div>
+                <div class="subtitle2">Victoria Larson</div>
+            </div>
+        </div>
+        <div class="secc">
+            <div class="secc1">
+                <div class="secc-overlay"></div>
+                <div class="c11">
+                    <div class="cc11">
+                        <p>$ 175.00</p>
+                        <p>Subscription Service</p>
+                        <p><a href="#" class="readmore">Read More</a></p>
+                    </div>
+                </div>
+                <div class="c22">
+                    <div class="cc22">
+                        <p>$375.00</p>
+                        <p>In-Home Design</p>
+                        <p><a href="#" class="readmore">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
